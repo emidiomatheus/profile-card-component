@@ -5,11 +5,14 @@
     --dark-gray: hsl(0, 0%, 59%)
 }
 
-body {
-    font-family: 'Kumbh Sans', sans-serif;
-
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
 
     background-color: var(--dark-cyan);
 
@@ -18,11 +21,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 .leftTopCircle {
-    width: 100%;
-    position: absolute;
+    position: fixed;
     top:50%;
     left:50%;
     margin-top: -55rem;
@@ -30,8 +35,7 @@ body {
 }
 
 .rightBottomCircle {
-    width: 100%;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
 }
@@ -114,4 +118,49 @@ footer {
     position: fixed;
 
     bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .card {
+        max-width: 90vw;
+        margin-left: -7.8rem;
+    }
+
+    .top-card-image {
+        max-width:90vw
+    }
+
+    h1 {
+        margin-bottom: .8rem;
+
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    table {
+        margin: 1rem 0;
+    }
+
+    .leftTopCircle {
+        width: 10%;
+        position: fixed;
+        left: 60%;
+    }
+
+    .rightBottomCircle {
+        position: fixed;
+        top: 45%;
+        left: 30%;
+    }
+
+    footer {
+        visibility: hidden;
+    }
 }
